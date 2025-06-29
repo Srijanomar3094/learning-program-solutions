@@ -1,0 +1,1 @@
+-- Scenario 2: Promote Customer to VIP Based on Balance
