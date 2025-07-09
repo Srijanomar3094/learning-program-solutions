@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotation-based configuration -->
+    <context:annotation-config/>
+
+    <!-- BookRepository bean -->
+    <bean id="bookRepository" class="com.cognizant.spring.di.BookRepository"/>
+
+    <!-- Constructor Injection -->
+    <bean id="constructorInjectedService" class="com.cognizant.spring.di.BookService">
+        <constructor-arg ref="bookRepository"/>
+    </bean>
+
+    <!-- Setter Injection -->
+    <bean id="setterInjectedService" class="com.cognizant.spring.di.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+    </bean>
+
+    <!-- Field Injection (using @Autowired) -->
+    <bean id="fieldInjectedService" class="com.cognizant.spring.di.BookService"/>
+
+</beans> 

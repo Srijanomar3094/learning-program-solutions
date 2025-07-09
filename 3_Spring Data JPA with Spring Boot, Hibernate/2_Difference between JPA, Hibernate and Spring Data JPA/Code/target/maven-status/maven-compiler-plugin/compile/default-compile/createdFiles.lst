@@ -1,0 +1,5 @@
+com/cognizant/jpa/repository/EmployeeRepository.class
+com/cognizant/jpa/hibernate/HibernateEmployeeService.class
+com/cognizant/jpa/JPAComparisonApplication.class
+com/cognizant/jpa/model/Employee.class
+com/cognizant/jpa/service/SpringDataJPAEmployeeService.class
