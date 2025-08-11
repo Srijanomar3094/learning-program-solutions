@@ -1,0 +1,38 @@
+git init  # Initialize a new Git repository
+git status  # Show the status of changes in the working directory and staging area
+git log  # Show the commit history of the current branch
+git log -n 5 --oneline --graph --decorate  # Show the last 5 commits with a simplified view and graph representation
+
+git branch -M main  # Rename the current branch to 'main'
+git remote add origin <repo url>  # Add a remote repository (origin) with the specified URL
+git remote -v  # Display the URLs of all remote repositories linked to the local repository
+git push -u origin main  # Push the 'main' branch to the remote repository and track it
+
+git add .  # Stage all changes (new, modified, deleted files) for commit
+git add names.txt  # Stage the specific file 'names.txt' for commit
+git commit -m "names.txt file modified"  # Commit the staged changes with a descriptive message
+git push  # Push the changes to the remote repository for the current branch
+git push origin <branch name>  # Push changes to a specific branch on the remote repository
+git push origin <branch name> -f  # Force-push changes to a branch on the remote repository, overwriting changes
+
+git stash  # Stash the current changes in the working directory and staging area
+git stash pop  # Apply the most recent stashed changes and remove it from the stash list
+git stash clear  # Clear all the stashes stored in the Git stash list
+git stash list  # List all the stashes currently saved in the stash list
+git stash apply stash@{1}  # Apply a specific stash (in this case, the second stash) without removing it from the list
+git stash -u  # Stash changes including untracked files
+
+git restore --staged names.txt  # Unstage changes made to 'names.txt' that were added to the staging area
+git reset <commit id>  # Reset the repository to a specific commit, keeping changes in the working directory
+git checkout <commit id>  # Check out a specific commit, detaching the HEAD at that commit
+git diff <commit id> <another commit id>  # Show the differences between two specific commits
+
+git branch <new-branch>  # Create a new branch but stay on the current branch
+git branch -d <branchname>  # Delete a specific branch locally
+git checkout <branchname>  # Switch to a specified branch
+git checkout -b new-branch  # Create and switch to a new branch
+
+git merge  # Merge changes from another branch into the current branch
+git remote add upstream <repo url>  # Add a remote repository (upstream) to track the original repository
+git fetch --all --prune  # Fetch changes from all remote repositories and remove branches that no longer exist
+git reset --hard upstream/main  # Reset the local branch to match the 'main' branch from the 'upstream' remote, discarding local changes
