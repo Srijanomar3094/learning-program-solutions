@@ -1,0 +1,19 @@
+React Events
+React events are just like DOM events but follow camelCase naming (onClick not onclick).
+
+You pass a function reference instead of a string of code.
+
+Event Handlers
+Functions that get triggered in response to an event (click, change, submit).
+
+Can be class methods or arrow functions in functional components.
+
+Synthetic Event
+React’s cross-browser wrapper around native events.
+
+Same interface as browser events, but works the same way across all browsers.
+
+Naming Convention
+Events: camelCase (onChange, onClick)
+
+Handler functions: Often handleSomething or onSomething naming style.
